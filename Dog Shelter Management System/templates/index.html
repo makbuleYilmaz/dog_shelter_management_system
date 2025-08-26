@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Barınak Sistemi</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='index.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Hoş Geldiniz</h1>
+    <form action="/user">
+      <button type="submit">Ziyaretçi Girişi</button>
+    </form>
+    <form action="/shelter-owner-check">
+      <button type="submit">Barınak Sahibi Girişi</button>
+    </form>
+  </body>
+</html>

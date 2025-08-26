@@ -1,0 +1,61 @@
+/* Tüm sayfa ayarları */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Dikey ortalama */
+  align-items: center; /* Yatay ortalama */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f9fc;
+}
+
+/* Ortalanmış form kutusu */
+.form {
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+/* Label ve input stilleri */
+label {
+  font-weight: 600;
+  color: #34495e;
+}
+
+input[type="number"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1.8px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s;
+}
+
+input[type="number"]:focus {
+  border-color: #2980b9;
+  outline: none;
+}
+
+/* Buton stilleri */
+button {
+  padding: 20px 20px;
+  background-color: #2980b9;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1c5980;
+}

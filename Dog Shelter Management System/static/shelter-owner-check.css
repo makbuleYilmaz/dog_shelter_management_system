@@ -1,0 +1,80 @@
+/* Genel body ayarları */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f4f8;
+  color: #333;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Başlık */
+h1 {
+  margin-bottom: 30px;
+  color: #2c3e50;
+  font-weight: 700;
+}
+
+/* Form tasarımı */
+.form {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Label ayarları */
+label {
+  margin-top: 15px;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #34495e;
+}
+
+/* Select ve input kutuları */
+select,
+input[type="password"] {
+  padding: 10px 15px;
+  border: 1.8px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+/* Odaklanıldığında renk değişimi */
+select:focus,
+input[type="password"]:focus {
+  border-color: #2980b9;
+  outline: none;
+}
+
+/* Buton stili */
+button {
+  margin-top: 30px;
+  background-color: #3498db;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.back {
+  padding: 10px 10px;
+}
+
+button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #85c1e9;
+}

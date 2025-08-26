@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Köpek Listesi</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='lists.css') }}"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>ID'si Bilinen Barınağın Bilgileri</h1>
+    </header>
+
+    <main class="container">
+      <table>
+        <thead>
+          <tr>
+            <th>Muayene ID</th>
+            <th>Hayvan ID</th>
+            <th>Veteriner ID</th>
+            <th>Tarih</th>
+            <th>Teşhis</th>
+            <th>Tedavi</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for inspection in inspections %}
+          <tr>
+            <td>{{ inspection.id }}</td>
+            <td>{{ inspection.animalId }}</td>
+            <td>{{ inspection.vetId }}</td>
+            <td>{{ inspection.date }}</td>
+            <td>{{ inspection.diagnosis }}</td>
+            <td>{{ inspection.treatment }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+      <form action="/">
+        <button type="submit">Geri Dön</button>
+      </form>
+    </main>
+  </body>
+</html>

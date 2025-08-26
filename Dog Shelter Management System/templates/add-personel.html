@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Personel Ekle</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='form.css') }}"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Yeni Personel Ekle</h1>
+    </header>
+
+    <main class="container">
+      <form action="/add-personel" method="POST">
+        <label for="ad">Ad:</label>
+        <input type="text" id="ad" name="ad" required />
+
+        <label for="soyad">Soyad:</label>
+        <input type="text" id="soyad" name="soyad" required />
+
+        <label for="gorev">Görev:</label>
+        <input type="text" id="gorev" name="gorev" required />
+
+        <label for="calismaTarihi">Çalışma Tarihi:</label>
+        <input type="date" id="calismaTarihi" name="calismaTarihi" required />
+
+        <button type="submit">Ekle</button>
+      </form>
+
+      <form action="/">
+        <button type="submit">Ana Sayfaya Dön</button>
+      </form>
+    </main>
+  </body>
+</html>

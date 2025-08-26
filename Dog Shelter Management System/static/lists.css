@@ -1,0 +1,93 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #3c8dbc;
+  color: white;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 16px;
+}
+
+thead {
+  background-color: #3c8dbc;
+  color: white;
+}
+
+th,
+td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+  background-color: #eaf2f8;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 25px;
+  text-decoration: none;
+  background-color: #3c8dbc;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: background-color 0.3s;
+}
+
+.back-link:hover {
+  background-color: #367fa9;
+}
+
+button {
+  margin-top: 30px;
+  background-color: #3498db;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+/* Odaklandığında dış çerçeve */
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #85c1e9;
+}

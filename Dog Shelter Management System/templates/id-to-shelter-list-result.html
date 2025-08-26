@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Köpek Listesi</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='lists.css') }}"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>ID'si Bilinen Barınağın Bilgileri</h1>
+    </header>
+
+    <main class="container">
+      <table>
+        <thead>
+          <tr>
+            <th>Barınak ID</th>
+            <th>Ad</th>
+            <th>Konum</th>
+            <th>Kapasite</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for shelter in shelters %}
+          <tr>
+            <td>{{ shelter.id }}</td>
+            <td>{{ shelter.name }}</td>
+            <td>{{ shelter.location }}</td>
+            <td>{{ shelter.capacity }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+      <form action="/">
+        <button type="submit">Geri Dön</button>
+      </form>
+    </main>
+  </body>
+</html>

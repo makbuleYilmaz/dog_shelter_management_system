@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Barınak Girişi</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='shelter-owner-check.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Barınak Girişi</h1>
+
+    <form class="form" action="/shelter-owner" method="POST">
+      <label for="barinak">Barınak Seçiniz:</label>
+      <select id="barinak" name="barinakId" required>
+        <option value="" disabled selected>Barınak Seçiniz</option>
+        <option value="1">Cankaya Karatas Gecici Hayvan Bakimevi</option>
+        <option value="2">
+          Golbasi Gecici Hayvan Bakimevi ve Rehabilitasyon Merkezi
+        </option>
+        <option value="3">
+          Sincan Gecici Hayvan Bakimevi ve Rehabilitasyon Merkezi
+        </option>
+        <option value="4">Patipark Hayvan Barinagi</option>
+        <option value="5">Etimesgut Hayvan Barinagi</option>
+        <option value="6">Cankaya Cemil Erkok Rehabilitasyon Merkezi</option>
+        <option value="7">
+          Esenyurt Hayvan Bakimevi ve Rehabilitasyon Merkezi
+        </option>
+        <option value="8">Altindag Belediyesi Hayvan Barinagi</option>
+        <option value="9">
+          Esenyurt Hayvan Bakimevi ve Rehabilitasyon Merkezi
+        </option>
+        <option value="10">Yedikule Hayvan Barinagi</option>
+        <option value="11">Tuzla Hayvan Barinagi</option>
+        <option value="12">
+          Kadikoy Belediyesi Gecici Hayvan Bakim Merkezi
+        </option>
+        <option value="13">Sile Hayvan Barinagi</option>
+        <option value="14">
+          Buyukcekmece Sahipsiz Hayvanlar Bakim Merkezi
+        </option>
+        <option value="15">Gumusdere Sahipsiz Hayvan Bakimevi</option>
+        <option value="16">Tepeoren Sahipsiz Hayvan Bakimevi</option>
+        <option value="17">Orhanli Sahipsiz Hayvan Bahceli Yasam Alani</option>
+        <option value="18">Kemerburgaz Sahipsiz Hayvan Bakimevi</option>
+        <option value="19">Beykoz Barinagi</option>
+        <option value="20">Mimarsinan Barinagi</option>
+        <option value="21">Seferihisar Hayvan Barinagi</option>
+        <option value="22">Selcuk Hayvan Barinagi</option>
+        <option value="23">Isikkent Gecici Kopek Bakimevi</option>
+        <option value="24">Pako Sokak Hayvanlari Sosyal Yasam Kampusu</option>
+        <option value="25">Buca Sokak Hayvanlari Rehabilitasyon Merkezi</option>
+        <option value="26">Foca Belediyesi Gecici Bakimevi</option>
+        <option value="27">Guzelbahce Gecici Kopek Bakimevi</option>
+        <option value="28">
+          Patipark Hayvan Bakim ve Rehabilitasyon Merkezi
+        </option>
+      </select>
+
+      <br />
+
+      <label for="sifre">Şifre:</label>
+      <input type="password" id="sifre" name="sifre" required />
+
+      <br />
+
+      <button class="button" type="submit">Giriş Yap</button>
+    </form>
+    <form action="/">
+      <button class="back" type="submit">Geri Dön</button>
+    </form>
+  </body>
+</html>

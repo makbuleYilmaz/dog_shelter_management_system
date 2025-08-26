@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Barınak Sistemi</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='index.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Hoş Geldiniz</h1>
+    <form action="/shelter-owner-animal-list">
+      <button type="submit">Barınaktaki Köpeklerin Listesini Göster</button>
+    </form>
+    <form action="/shelter-owner-employee-list">
+      <button type="submit">Barınaktaki Çalışanların Listesini Göster</button>
+    </form>
+    <form action="/shelter-owner-inspection-list">
+      <button type="submit">
+        Barınakta Tedavi Gören Köpeklerin Tedavi Bilgilerini Göster
+      </button>
+    </form>
+    <form action="/add-animal">
+      <button type="submit">Barınağa Yeni Hayvan Ekle</button>
+    </form>
+    <form action="/add-personel">
+      <button type="submit">Barınağa Yeni Çalışan Ekle</button>
+    </form>
+    <form action="/">
+      <button type="submit">Geri Dön</button>
+    </form>
+  </body>
+  {% if error %}
+  <script>
+    alert("{{ hata }}");
+  </script>
+  {% endif %}
+</html>

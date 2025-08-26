@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Köpek Ekle</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='form.css') }}"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Yeni Köpek Ekle</h1>
+    </header>
+
+    <main class="container">
+      <form action="/add-animal" method="POST">
+        <label for="ad">Ad:</label>
+        <input type="text" id="ad" name="ad" required />
+
+        <label for="tur">Tür:</label>
+        <input type="text" id="tur" name="tur" required />
+
+        <label for="yas">Yaş:</label>
+        <input type="number" id="yas" name="yas" required min="0" />
+
+        <label for="saglik">Sağlık Durumu:</label>
+        <select id="saglik" name="saglik" required>
+          <option value="">--Seçiniz--</option>
+          <option value="Saglikli">Sağlıklı</option>
+          <option value="Tedavi Ediliyor">Tedavi Ediliyor</option>
+          <option value="Hasta">Hasta</option>
+        </select>
+        <label for="saglik">Cinsiyet:</label>
+        <select id="cinsiyet" name="cinsiyet" required>
+          <option value="">--Seçiniz--</option>
+          <option value="Saglikli">Disi</option>
+          <option value="Tedavi Ediliyor">Erkek</option>
+        </select>
+
+        <label for="gelis">Geliş Tarihi:</label>
+        <input type="date" id="gelis" name="gelis" required />
+
+        <button type="submit">Ekle</button>
+      </form>
+
+      <form action="/">
+        <button type="submit">Ana Sayfaya Dön</button>
+      </form>
+    </main>
+  </body>
+</html>

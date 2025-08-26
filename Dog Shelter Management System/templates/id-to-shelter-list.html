@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Köpek Listesi</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='id-to-animal-list.css') }}"
+    />
+  </head>
+  <body>
+    <form class="form" action="/id-to-shelter-list-result" method="POST">
+      <label for="id">ID</label>
+      <input type="number" id="id" name="id" required />
+      <button type="submit">Gir</button>
+    </form>
+    <form action="/">
+      <button type="submit">Geri Dön</button>
+    </form>
+  </body>
+</html>

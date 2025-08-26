@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Köpek Listesi</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='lists.css') }}"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>ID'si Bilinen Barınağın Bilgileri</h1>
+    </header>
+
+    <main class="container">
+      <table>
+        <thead>
+          <tr>
+            <th>Personel ID</th>
+            <th>Ad</th>
+            <th>Soyad</th>
+            <th>Görev</th>
+            <th>Çalışma Tarihi</th>
+            <th>Barınak ID</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for employee in employees %}
+          <tr>
+            <td>{{ employee.id }}</td>
+            <td>{{ employee.firstName }}</td>
+            <td>{{ employee.lastName }}</td>
+            <td>{{ employee.task }}</td>
+            <td>{{ employee.arrivalDate }}</td>
+            <td>{{ employee.shelterId }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+      <form action="/">
+        <button type="submit">Geri Dön</button>
+      </form>
+    </main>
+  </body>
+</html>
